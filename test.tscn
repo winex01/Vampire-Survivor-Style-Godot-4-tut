@@ -1,0 +1,20 @@
+[gd_scene load_steps=2 format=3 uid="uid://dbrvruy452aww"]
+
+[ext_resource type="PackedScene" uid="uid://c106syn8oa25j" path="res://player.tscn" id="1_hlcny"]
+
+[node name="Test" type="Node"]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = -30
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+offset_left = -11.0
+offset_top = -47.0
+offset_right = 2029.0
+offset_bottom = 1088.0
+
+[node name="Player" parent="." instance=ExtResource("1_hlcny")]
+position = Vector2(1004, 516)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(1033, 548)

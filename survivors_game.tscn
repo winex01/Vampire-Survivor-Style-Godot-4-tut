@@ -1,0 +1,190 @@
+[gd_scene load_steps=5 format=3 uid="uid://bc6so8177oasc"]
+
+[ext_resource type="Script" path="res://survivors_game.gd" id="1_6nled"]
+[ext_resource type="PackedScene" uid="uid://c106syn8oa25j" path="res://player.tscn" id="1_yhmn6"]
+[ext_resource type="PackedScene" uid="uid://dshrd6icriybr" path="res://pine_tree.tscn" id="2_rxcrq"]
+
+[sub_resource type="Curve2D" id="Curve2D_prb70"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -718.345, -149, 0, 0, 0, 0, -639.969, 2200, 0, 0, 0, 0, 861.313, 2210, 0, 0, 0, 0, 2656.23, 2238.41, 0, 0, 0, 0, 2552.46, -73, 0, 0, 0, 0, 2229, -85, 0, 0, 0, 0, -189, -97)
+}
+point_count = 7
+
+[node name="Game" type="Node2D"]
+y_sort_enabled = true
+script = ExtResource("1_6nled")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = -30
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+offset_right = 1985.0
+offset_bottom = 1129.0
+
+[node name="Player" parent="." instance=ExtResource("1_yhmn6")]
+position = Vector2(999, 585)
+
+[node name="Path2D" type="Path2D" parent="Player"]
+position = Vector2(-1070.73, -1252.97)
+scale = Vector2(1.07925, 1.30225)
+curve = SubResource("Curve2D_prb70")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Player/Path2D"]
+unique_name_in_owner = true
+position = Vector2(-718.345, -149)
+rotation = 1.53744
+
+[node name="GameOver" type="CanvasLayer" parent="."]
+unique_name_in_owner = true
+visible = false
+
+[node name="ColorRect" type="ColorRect" parent="GameOver"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.513726)
+
+[node name="Label" type="Label" parent="GameOver/ColorRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -43.5
+offset_top = -11.5
+offset_right = 43.5
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 141
+text = "Game Over"
+
+[node name="PineTree" parent="." instance=ExtResource("2_rxcrq")]
+position = Vector2(512, 910)
+
+[node name="PineTree2" parent="." instance=ExtResource("2_rxcrq")]
+position = Vector2(434, 288)
+
+[node name="PineTree3" parent="." instance=ExtResource("2_rxcrq")]
+position = Vector2(1640, 549)
+
+[node name="PineTree4" parent="." instance=ExtResource("2_rxcrq")]
+position = Vector2(1567, 649)
+
+[node name="PineTree5" parent="." instance=ExtResource("2_rxcrq")]
+position = Vector2(1718, 637)
+
+[node name="PineTree6" parent="." instance=ExtResource("2_rxcrq")]
+position = Vector2(1353, 137)
+
+[node name="PineTree7" parent="." instance=ExtResource("2_rxcrq")]
+position = Vector2(1492, 1034)
+
+[node name="PineTree8" parent="." instance=ExtResource("2_rxcrq")]
+position = Vector2(429, 962)
+
+[node name="PineTree9" parent="." instance=ExtResource("2_rxcrq")]
+position = Vector2(346, 446)
+
+[node name="PineTree10" parent="." instance=ExtResource("2_rxcrq")]
+position = Vector2(1091, 2043)
+
+[node name="PineTree11" parent="." instance=ExtResource("2_rxcrq")]
+position = Vector2(1326, 2040)
+
+[node name="PineTree12" parent="." instance=ExtResource("2_rxcrq")]
+position = Vector2(1599, 2043)
+
+[node name="PineTree13" parent="." instance=ExtResource("2_rxcrq")]
+position = Vector2(1268, 1546)
+
+[node name="PineTree14" parent="." instance=ExtResource("2_rxcrq")]
+position = Vector2(2386, 1236)
+
+[node name="PineTree15" parent="." instance=ExtResource("2_rxcrq")]
+position = Vector2(2582, 458)
+
+[node name="PineTree16" parent="." instance=ExtResource("2_rxcrq")]
+position = Vector2(-1254, 503)
+
+[node name="PineTree17" parent="." instance=ExtResource("2_rxcrq")]
+position = Vector2(-1254, 503)
+
+[node name="PineTree18" parent="." instance=ExtResource("2_rxcrq")]
+position = Vector2(-352, 888)
+
+[node name="PineTree19" parent="." instance=ExtResource("2_rxcrq")]
+position = Vector2(-1130, 1088)
+
+[node name="PineTree20" parent="." instance=ExtResource("2_rxcrq")]
+position = Vector2(-496, 435)
+
+[node name="PineTree21" parent="." instance=ExtResource("2_rxcrq")]
+position = Vector2(-496, 435)
+
+[node name="PineTree22" parent="." instance=ExtResource("2_rxcrq")]
+position = Vector2(-539, 1625)
+
+[node name="PineTree23" parent="." instance=ExtResource("2_rxcrq")]
+position = Vector2(4721, 919)
+
+[node name="PineTree24" parent="." instance=ExtResource("2_rxcrq")]
+position = Vector2(4621, 912)
+
+[node name="PineTree25" parent="." instance=ExtResource("2_rxcrq")]
+position = Vector2(4514, 1062)
+
+[node name="PineTree26" parent="." instance=ExtResource("2_rxcrq")]
+position = Vector2(3993, 2067)
+
+[node name="PineTree28" parent="." instance=ExtResource("2_rxcrq")]
+position = Vector2(1149, 2908)
+
+[node name="PineTree30" parent="." instance=ExtResource("2_rxcrq")]
+position = Vector2(2425, 2794)
+
+[node name="PineTree31" parent="." instance=ExtResource("2_rxcrq")]
+position = Vector2(80, 2623)
+
+[node name="PineTree32" parent="." instance=ExtResource("2_rxcrq")]
+position = Vector2(764, -406)
+
+[node name="PineTree33" parent="." instance=ExtResource("2_rxcrq")]
+position = Vector2(1527, -420)
+
+[node name="PineTree34" parent="." instance=ExtResource("2_rxcrq")]
+position = Vector2(1613, -477)
+
+[node name="PineTree35" parent="." instance=ExtResource("2_rxcrq")]
+position = Vector2(1670, -363)
+
+[node name="PineTree36" parent="." instance=ExtResource("2_rxcrq")]
+position = Vector2(986, -171)
+
+[node name="PineTree37" parent="." instance=ExtResource("2_rxcrq")]
+position = Vector2(-418, -363)
+
+[node name="PineTree38" parent="." instance=ExtResource("2_rxcrq")]
+position = Vector2(2540, -342)
+
+[node name="PineTree39" parent="." instance=ExtResource("2_rxcrq")]
+position = Vector2(3317, -520)
+
+[node name="PineTree40" parent="." instance=ExtResource("2_rxcrq")]
+position = Vector2(1319, -1051)
+
+[node name="PineTree29" parent="." instance=ExtResource("2_rxcrq")]
+position = Vector2(3202, 1561)
+
+[node name="PineTree27" parent="." instance=ExtResource("2_rxcrq")]
+position = Vector2(3552, 499)
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.3
+autostart = true
+
+[connection signal="health_depleted" from="Player" to="." method="_on_player_health_depleted"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
